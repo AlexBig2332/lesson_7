@@ -35,5 +35,5 @@ with open('car.csv', 'w') as file:
 # json файл
 import json
 
-with open('car_json.txt', 'w') as f:
-    json.dump(str(car_inf), f)
+with open('car_json.txt', 'w') as file:
+    json.dump(car_inf, file)
