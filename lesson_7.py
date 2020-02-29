@@ -1,10 +1,7 @@
 with open('car_inf.txt') as f:
     lists = (f.read())
     car_inf = list(lists.split(','))
-    # for row in f:
-    #     list = [x.strip() for x in row.split(',')]
-    #     car_inf.append(list)
-print(car_inf)
+
 # docx файл
 from docxtpl import DocxTemplate
 
