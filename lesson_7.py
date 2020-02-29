@@ -3,8 +3,11 @@ with open('car_inf.txt') as f:
     for row in f:
         list = [x.strip() for x in row.split(',')]
         car_inf.append(list)
-car_inf_report_1 = car_inf[1]
-print(car_inf_report_1)
+
+from random import randint
+n = randint(0, 4)
+car_inf_report = car_inf[n]
+print(car_inf_report)
 
 # docx файл
 from docxtpl import DocxTemplate
@@ -28,7 +31,7 @@ def report(Brand, Model, Engine_Volume, Price):
     document = from_template(Brand, Model, Engine_Volume, Price, template)
 
 
-report(car_inf_report_1[0], car_inf_report_1[1], car_inf_report_1[2], car_inf_report_1[3])
+report(car_inf_report[0], car_inf_report[1], car_inf_report[2], car_inf_report[3])
 # csv файл
 import csv
 
