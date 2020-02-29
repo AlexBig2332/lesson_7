@@ -1,6 +1,6 @@
 with open('car_inf.txt') as f:
-    list = (f.read())
-    car_inf = list.split(',')
+    lists = (f.read())
+    car_inf = list(lists.split(','))
     # for row in f:
     #     list = [x.strip() for x in row.split(',')]
     #     car_inf.append(list)
@@ -33,7 +33,7 @@ import csv
 
 with open('car.csv', 'w') as file:
     writer = csv.writer(file, delimiter = '-')
-    writer.writerows(car_inf)
+    writer.writerow(car_inf)
 
 # json файл
 import json
